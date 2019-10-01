@@ -366,3 +366,69 @@ let box1 = boxFactory(15, 15, 10);
 
 console.log(box1);
 // {width: 15, height: 15, depth: 10}
+
+
+
+
+/**
+  * Object Destructuring :
+  *
+  * We can shorthand creating variables with object properties values
+  *
+  * Variable names must be same as property names
+  *
+  * var/let/const object-name = {
+  *   property1-name: property1-value
+  *   property2-name: property2-value
+  *   ...
+  * }
+  *
+  * var/let/const {
+  *   property1-name,
+  *   property3-name: alias-name,
+  *   property3-name = default-value,
+  * } = object-name;
+  */
+
+// example:
+
+const person = {
+  name: 'Mohamed',
+  age: 25,
+  career: 'web developer'
+};
+
+const {name, career: job, nationality = 'egyptian'} = person;
+
+console.log(name + ' is an ' + nationality + ', and works as a ' + job);
+// 'Mohamed is an egyptian, and works as a web developer'
+
+
+
+
+/**
+  * Object Destructured Properties as Function Parameters :
+  *
+  * We can destrucute object in function declaration
+  *
+  * var/let/const function-name = ({parameter1, parameter2, ....}, other-parameters...) {
+  *   
+  * }
+  *
+  * function-name(object-name, other-arguments);
+  */
+
+// example:
+
+const printPersonData = ({name, age, career}, nationality) => {
+  console.log(name, age, career, nationality);
+};
+
+const person = {
+  name: 'Mohamed',
+  age: 25,
+  career: 'web developer'
+};
+
+printPersonData(person, 'egyptian');
+// 'Mohamed 25 web developer egyptian'
