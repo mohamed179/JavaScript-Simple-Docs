@@ -1,3 +1,3 @@
-# The largest heading
+# JavaScript Simple Docs
 
 My simple javascript syntax documentation
